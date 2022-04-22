@@ -18,6 +18,7 @@ const Navigation = () => {
       >
         <Nav.Link href="#action1">Home</Nav.Link>
         <Nav.Link href="#action2">New arrivals</Nav.Link>
+        <Nav.Link href="#">Create</Nav.Link>
         <NavDropdown title="Profile" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Settings</NavDropdown.Item>
          
@@ -26,9 +27,7 @@ const Navigation = () => {
             Logout
           </NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="#" disabled>
-          Link
-        </Nav.Link>
+        
       </Nav>
       <Form className="d-flex">
         <FormControl
