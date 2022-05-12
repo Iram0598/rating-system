@@ -1,11 +1,13 @@
 import React from 'react'
-import {Navbar, NavDropdown, Nav, Container, Form, FormControl, Button } from 'react-bootstrap'
-
+import {Navbar, NavDropdown, Nav, Container, Form, FormControl, Button, NavItem } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 
 const Navigation = () => {
   return (
+  
     <div>
+      
      <Navbar bg="dark" variant="dark" expand="lg">
   <Container fluid>
     <Navbar.Brand href="#">Ratesturant</Navbar.Brand>
@@ -16,9 +18,12 @@ const Navigation = () => {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">New arrivals</Nav.Link>
-        <Nav.Link href="#">Create</Nav.Link>
+         <Nav.Link as={Link} to ={"/"}>Home</Nav.Link>
+         <Nav.Link as={Link} to ={"/new"}>New arrival</Nav.Link>
+         <Nav.Link as={Link} to ={"/create"}>Create</Nav.Link>
+         
+         <Nav.Link as={Link} to ={"/login"}>Login</Nav.Link>
+         
         <NavDropdown title="Profile" id="navbarScrollingDropdown">
           <NavDropdown.Item href="#action3">Settings</NavDropdown.Item>
          
@@ -41,7 +46,10 @@ const Navigation = () => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+
     </div>
+    
+    
   )
 }
 
